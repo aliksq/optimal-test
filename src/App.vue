@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div class="wrapper">
+      <div class="container">
+        <div class="content">
+          <h1>Редактор блоков на Vue 3</h1>
+          <ItemsList />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ItemsList from "./components/ItemsList"
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {ItemsList},
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import '~reset.css/reset.css';
+@import '~normalize.css/normalize.css';
+h1{
+  color: #2C3E50;
+}
+.wrapper{
+  max-width: 1500px;
+}
+.container{
+  margin: 0 auto;
+  max-width: 80%;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
